@@ -21,6 +21,7 @@
       <th scope="col">Email</th>
       {{-- <th scope="col">Password</th> --}}
       <th scope="col">Phone</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +32,10 @@
             <td>{{$data->email}}</td>
             {{-- <td>{{$data->password}}</td> --}}
             <td>{{$data->phone}}</td>
+            <td>
+                <a href="{{ url( '/edit/data/'.$data->id ) }}" class="btn btn-success">Edit</a>
+                <a href="" class="btn btn-danger">delete</a>
+            </td>
         </tr>
     @endforeach
 

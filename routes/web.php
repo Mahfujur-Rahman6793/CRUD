@@ -21,3 +21,5 @@ use App\Http\Controllers\CrudController;
 Route::get('/',[CrudController::class,'showData']);
 Route::get('/add/data',[CrudController::class,'addData'])->name('add.data');
 Route::post('/store/data',[CrudController::class,'storeData'])->name('store.data');
+Route::get('/edit/data/{id}',[CrudController::class,'editData']);
+Route::post('/update/data/{id}',[CrudController::class,'updateData']);
